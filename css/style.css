@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'Oswald';
+  src: url("../fonts/Oswald-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url("../fonts/OpenSans-VariableFont_wdth,wght.ttf");
+}
+
+body {
+  font-family: 'OpenSans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.container {
+  max-width: 1182px;
+  margin: 0 auto;
+}
+
+.pageHeader {
+  padding: 74px 0;
+  position: fixed;
+}
+
+.pageHeader__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.pageHeader__logo {
+  color: #fff;
+}
+
+.pageHeader__navList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pageHeader__link {
+  color: #fff;
+}
+/*# sourceMappingURL=style.css.map */
