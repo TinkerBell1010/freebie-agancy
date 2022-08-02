@@ -9,7 +9,7 @@
 }
 
 body {
-  font-family: 'OpenSans', sans-serif;
+  font-family: "OpenSans", sans-serif;
 }
 
 a {
@@ -26,8 +26,10 @@ li {
 }
 
 .pageHeader {
-  padding: 74px 0;
+  padding: 44px 0;
   position: fixed;
+  right: 0;
+  left: 0;
 }
 
 .pageHeader__nav {
@@ -40,6 +42,12 @@ li {
 }
 
 .pageHeader__logo {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 30px;
+  letter-spacing: 2.304px;
   color: #fff;
 }
 
@@ -50,6 +58,35 @@ li {
 }
 
 .pageHeader__link {
+  font-family: "Oswald", sans-serif;
+  padding: 30px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 1.94px;
   color: #fff;
+  text-transform: uppercase;
+}
+
+.pageHeader__navItem:last-of-type > .pageHeader__link {
+  padding-right: 0;
+}
+
+.topSlider {
+  width: 100%;
+  overflow: hidden;
+}
+
+.topSlider__slides {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 300%;
+}
+
+.topSlider__image {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 /*# sourceMappingURL=style.css.map */

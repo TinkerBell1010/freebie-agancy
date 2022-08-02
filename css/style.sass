@@ -11,7 +11,7 @@
 
 
 body
-    font-family: 'OpenSans', sans-serif
+    font-family: $textFont
 
 a 
     text-decoration: none
@@ -26,30 +26,45 @@ li
 
 
 .pageHeader 
-    padding: 74px 0
+    padding: 44px 0
     position: fixed
-    
+    right: 0
+    left: 0    
 
     &__nav 
         display: flex
         justify-content: space-between
 
+
     &__logo 
-        color: #fff
+        font-family: $titleFont
+        text-transform: uppercase
+        +textProperties(36px, normal, 30px, 2.304px, #fff)
 
     &__navList 
         display: flex
 
-    &__navItem 
+    &__link
+        font-family: $titleFont
+        padding: 30px
+        +textProperties(14px, 400, 21px, 1.94px, #fff)
+        text-transform: uppercase
+        
 
-    &__link 
-        color: #fff
+    &__navItem:last-of-type > &__link
+        padding-right: 0
 
 .topSlider 
+    width: 100%
+    overflow: hidden
 
     &__slides 
+        display: flex
+        width: 300%
 
     &__image 
+        width: 100%
+        object-fit: cover
 
     &__text 
 
