@@ -1,47 +1,35 @@
 @import _vars.sass
 
-@font-face 
-    font-family: 'Oswald';
-    src: url('../fonts/Oswald-VariableFont_wght.ttf');
-
-
-@font-face 
-    font-family: 'OpenSans';
-    src: url('../fonts/OpenSans-VariableFont_wdth,wght.ttf');
-
-
 body
     font-family: $textFont
 
-a 
+a
     text-decoration: none
 
 li
     list-style-type: none
 
-
-.container 
+.container
     max-width: 1182px
     margin: 0 auto
 
-
-.pageHeader 
+.pageHeader
     padding: 44px 0
     position: fixed
     right: 0
-    left: 0    
+    left: 0
+    z-index: 1
 
-    &__nav 
+    &__nav
         display: flex
         justify-content: space-between
 
-
-    &__logo 
+    &__logo
         font-family: $titleFont
         text-transform: uppercase
         +textProperties(36px, normal, 30px, 2.304px, #fff)
 
-    &__navList 
+    &__navList
         display: flex
 
     &__link
@@ -49,23 +37,396 @@ li
         padding: 30px
         +textProperties(14px, 400, 21px, 1.94px, #fff)
         text-transform: uppercase
-        
+        position: relative
+
+        &::after
+            content: ' '
+            width: 18px
+            height: 2px
+            background-color: #4CAF50
+            display: block
+            position: absolute
+            right: 30px
 
     &__navItem:last-of-type > &__link
         padding-right: 0
 
-.topSlider 
+        &::after
+            right: 0
+
+.topSlider
     width: 100%
     overflow: hidden
+    position: relative
 
-    &__slides 
+    &__slides
         display: flex
         width: 300%
 
-    &__image 
+    &__image
         width: 100%
         object-fit: cover
+        max-height: 100vh
 
-    &__text 
+    &__text
+        position: absolute
+        right: 0
+        left: 0
+        z-index: 1
+        top: 45%
+        text-align: center
 
-    &__controls 
+    &__text p
+        opacity: 0.8
+        +textProperties(20px, 400, 20px, 1.28px, #fff)
+
+    &__title
+        font-family: $titleFont
+        +textProperties(72px, 500, 72px, 4.608px, #fff)
+        margin: 0 0 24px 0
+
+    &__controls
+        position: absolute
+        z-index: 1
+        left: 0
+        right: 0
+        bottom: 20px
+        display: flex
+        justify-content: center
+        align-items: flex-end
+
+        &Button
+            background-color: transparent
+            border: none
+            color: #fff
+            cursor: pointer
+            font-family: $titleFont
+            +textProperties(18px, 700, 28px, 1.152px, rgba(255, 255, 255, 0.437245))
+            transition: all .6s ease
+            padding-top: 0
+            padding-bottom: 0
+
+            &:hover
+                +textProperties(32px, 700, 36px, 2.304px, rgba(255, 255, 255, 0.8))
+
+            &_active
+                +textProperties(36px, 700, 36px, 2.304px, #fff)
+                position: relative
+
+                &::before
+                    display: block
+                    content: ' '
+                    height: 2px
+                    width: 40px
+                    background-color: #4CAF50
+                    position: absolute
+                    top: 18px
+                    right: 6px
+                    z-index: -1
+
+.aboutUs
+    margin: 149px auto 117px
+    position: relative
+    min-height: 562px
+
+    &__title
+        font-family: 'Encode Sans SC', sans-serif
+        +textProperties(40px, 200, 65px, 2.688px, #504E4E)
+        text-transform: uppercase
+        font-style: normal
+        display: flex
+        flex-direction: column
+        margin: 0
+        padding: 73px 0 24px
+
+        & b
+            font-family: $titleFont
+            +textProperties(36px, 700, 53px, 2.304px, #333333)
+
+    &__text
+        +textProperties(15px, 300, 25px, 1.26px, #5B5858)
+        width: 311px
+        display: flex
+        margin: 0 0 0 21px
+
+        &::before
+            display: block
+            content: ' '
+            height: 2px
+            min-width: 20px
+            background-color: #353535
+            margin: 14px 10px 0 0
+
+        &:last-of-type
+            float: right
+            margin-top: 110px
+
+    &__background
+
+    &__image
+        position: absolute
+        top: 0
+        left: 193px
+        z-index: -1
+
+        &:last-of-type
+            top: 168px
+            right: 260px
+            left: auto
+            z-index: -3
+
+    &__greenBox
+        width: 309px
+        height: 418px
+        background-color: #4CAF50
+        position: absolute
+        z-index: -2
+        top: 62px
+        left: 403px
+
+.sectionTitle
+    font-family: $titleFont
+    +textProperties(48px, 700, 71px, 3.072px, #252525)
+    margin: 0
+
+    &::after
+        display: block
+        content: ' '
+        background-color: #252525
+        width: 45px
+        height: 2px
+        margin-top: 7px
+
+.services
+    background-color: #FBFBFB
+    padding: 129px 0 136px
+
+    &__list
+        display: flex
+        justify-content: space-between
+        margin-top: 85px
+
+    &__link
+        display: block
+
+    &__item
+        width: 373px
+        background-color: #fff
+        padding: 50px 49px 32px 43px
+        box-sizing: border-box
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        border-bottom: 3px solid #fff
+        transition: all 0.4s ease
+
+        &Title
+            font-family: $titleFont
+            +textProperties(20px, 300, 30px, 1.28px, #252525)
+            text-transform: uppercase
+            width: 50%
+            margin: 0
+
+            &::after
+                display: block
+                content: ' '
+                background-color: #252525
+                width: 35px
+                height: 2px
+                margin-top: 15px
+
+        &Image
+            width: 25px
+
+            &Wrapper
+                width: 50px
+                height: 50px
+                box-shadow: 0px 0px 20px #DBDBDB
+                border-radius: 50%
+                display: flex
+                justify-content: center
+                align-items: center
+
+            & path
+                transition: all 0.4s ease
+                fill: #BCBCBC
+
+        &Text
+            +textProperties(12px, 400, 25px, 1.008px, #777777)
+            width: 100%
+
+        &More
+            font-family: $titleFont
+            +textProperties(10px, 300, 15px, 0.64px, #252525)
+            text-transform: uppercase
+            opacity: 0.5
+            transition: all .4s ease
+
+    &__link:hover &__item
+        border-bottom-color: #70BF73
+
+    &__link:hover &__itemMore
+        opacity: 1
+
+    &__link:hover &__itemImage path
+        fill: #000
+
+.works
+    display: grid
+    padding: 164px 0 16px
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: repeat(5, 1fr)
+    column-gap: 17px
+
+    &__header
+
+    &__title
+
+    &__nav
+        margin-top: 31px
+
+        &List
+            display: flex
+            margin: 0
+            padding: 0
+
+        &Button
+            background-color: transparent
+            border: none
+            text-transform: uppercase
+            +textProperties(13px, 400, 13px, 0.832px, #252525)
+            opacity: 0.3
+            transition: all .4s ease
+            cursor: pointer
+            padding: 19px
+            text-align: left
+
+            &_active
+                opacity: 1
+
+            &:hover
+                opacity: 0.8
+
+        &Item:first-of-type &Button
+            padding-left: 0
+
+    &__item
+        display: flex
+        flex-direction: column
+        position: relative
+        align-items: flex-start
+        width: 100%
+        grid-row: span 2
+
+        &:nth-of-type(odd)
+            align-items: flex-end
+            text-align: right
+
+        &Title
+            font-family: $titleFont
+            +textProperties(48px, 300, 71px, 3.072px, #252525)
+            text-transform: uppercase
+            position: absolute
+            right: 0
+            top: 270px
+            margin: 0
+            transition: all .6s ease
+            text-decoration: line-through solid transparent
+
+        &:hover &Title
+            text-decoration-color: #70BF73
+
+        &:nth-of-type(odd) &Title
+            right: auto
+            left: 0
+            text-align: left
+
+        &Image
+            width: 455px
+
+        &Type
+            +textProperties(18px, 400, 21px, 1.152px, #252525)
+            margin: 17px 0 20px 168px
+
+        &:nth-of-type(odd) &Type
+            margin: 17px 168px 20px 0
+
+        &Description
+            +textProperties(13px, 400, 23px, 0.832px, #C2C2C2)
+            width: 320px
+            margin: 0 0 0 168px
+
+        &:nth-of-type(odd) &Description
+            margin: 0 168px 0 0
+
+        &More
+            +textProperties(13px, 400, 13px, 0.832px, #252525)
+            text-transform: uppercase
+            position: relative
+            margin: 20px 0 137px 168px
+            opacity: 0
+            transition: all .6s ease
+            &::before
+                position: absolute
+                display: block
+                content: ' '
+                width: 50px
+                height: 3px
+                background-color: #70BF73
+                z-index: -1
+                left: -4px
+                top: 4px
+
+            &::after
+                position: absolute
+                display: block
+                content: ' '
+                width: 55px
+                height: 3px
+                background-color: #70BF73
+                top: 4px
+                right: -4px
+
+        &:nth-of-type(odd) &More
+            margin: 20px 168px 137px 0
+
+        &:hover &More
+            opacity: 1
+
+    &__more
+        font-family: $titleFont
+        +textProperties(13px, 400, 1, 0.832px, #252525)
+        text-transform: lowercase
+        justify-self: end
+        align-self: center
+        transition: all .6s ease
+        padding: 30px 0 30px 30px
+
+        &:hover
+            font-size: 20px
+
+.team
+
+
+    &__title
+
+
+    &__list
+
+
+    &__person
+
+
+        &Image
+
+
+        &Text
+
+
+        &Name
+
+
+        &Position
+
+
+        &Motto
