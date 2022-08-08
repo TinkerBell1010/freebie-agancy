@@ -406,27 +406,126 @@ li
             font-size: 20px
 
 .team
-
+    background-color: #FBFBFB
+    padding: 129px 0 167px
 
     &__title
 
-
     &__list
-
+        display: flex
+        justify-content: space-between
+        margin-top: 65px
 
     &__person
-
+        margin: 0
+        position: relative
+        cursor: pointer
+        display: flex
 
         &Image
-
+            width: 370px
+            object-fit: cover
 
         &Text
+            position: absolute
+            background: rgba(255, 255, 255, 0.5)
+            max-height: 55px
+            overflow: hidden
+            padding: 13px 0 15px
+            box-sizing: border-box
+            bottom: 0
+            left: 0
+            right: 0
+            text-align: center
+            transition: all 1s ease
 
+        &:hover &Text
+            max-height: 100%
+            padding: 20px 0 30px
 
         &Name
+            text-transform: uppercase
+            font-family: $titleFont
+            +textProperties(18px, 300, 27px, 1.152px, #252525)
+            display: flex
+            flex-direction: column
+            align-items: center
 
+            &::after
+                display: block
+                content: ' '
+                background-color: #252525
+                width: 45px
+                height: 2px
+                margin-top: 9px
+                opacity: 0
+                transition: all 1s ease
+
+        &:hover &Name::after
+            opacity: 1
 
         &Position
-
+            font-family: $titleFont
+            text-transform: capitalize
+            +textProperties(18px, 300, 27px, 1.152px, #252525)
+            margin: 6px 0 12px
 
         &Motto
+            +textProperties(12px, 300, 25px, 1.008px, #777777)
+            margin: 0
+
+.reviews
+
+    &__slider
+
+    &__quote
+
+    &__quoteText
+
+    &__quoteIcon
+
+    &__quoteAuthor
+
+    &__quoteService
+
+    &__quoteStars
+
+    &__slideStar
+
+    &__slideStar_disabled
+
+    &__controls
+
+    &__button
+
+    &__buttonIcon
+
+    &__line
+
+.pageFooter
+
+.contacts
+
+    &__forms
+
+    &__formButton
+
+    &__formIcon
+
+    &__formTitle
+
+    &__formText
+
+    &__info
+
+    &__text
+
+    &__socialMedia
+
+    &__link
+
+    &__linkIcon
+
+.copyright
+
+    &__text

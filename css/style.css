@@ -486,4 +486,84 @@ li {
 }
 .works__more:hover {
   font-size: 20px;
+}
+
+.team {
+  background-color: #FBFBFB;
+  padding: 129px 0 167px;
+}
+.team__list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 65px;
+}
+.team__person {
+  margin: 0;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+}
+.team__personImage {
+  width: 370px;
+  object-fit: cover;
+}
+.team__personText {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  max-height: 55px;
+  overflow: hidden;
+  padding: 13px 0 15px;
+  box-sizing: border-box;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  transition: all 1s ease;
+}
+.team__person:hover .team__personText {
+  max-height: 100%;
+  padding: 20px 0 30px;
+}
+.team__personName {
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 27px;
+  letter-spacing: 1.152px;
+  color: #252525;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.team__personName::after {
+  display: block;
+  content: " ";
+  background-color: #252525;
+  width: 45px;
+  height: 2px;
+  margin-top: 9px;
+  opacity: 0;
+  transition: all 1s ease;
+}
+.team__person:hover .team__personName::after {
+  opacity: 1;
+}
+.team__personPosition {
+  font-family: "Oswald", sans-serif;
+  text-transform: capitalize;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 27px;
+  letter-spacing: 1.152px;
+  color: #252525;
+  margin: 6px 0 12px;
+}
+.team__personMotto {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 25px;
+  letter-spacing: 1.008px;
+  color: #777777;
+  margin: 0;
 }/*# sourceMappingURL=style.css.map */
